@@ -16,4 +16,4 @@
 ## Version
 
 * Ruby 2.3.4
-* Rails 4.2.5
+* Rails 4.2.8
