@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="row">
+      <% temp = 4 %>
+      <% @t.each do |t| %>
+          <% if temp != t.term %>
+          <hr width = "90%">
+          <% end %>
+          <div class="col-sm-3">
+            <div class="card" style="width: 16rem; margin-top: 1rem; margin-bottom: 1rem;">
+              <img class="card-img-top" src="/assets/<%=t.name%>.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title"><%= t.name %></h5>
+                <p class="card-text">
+                  <%= t.term %>기에 배워<br>
+                  <%= t.istutor %>기 운영진으로 활동</p>
+              </div>
+            </div>
+          </div>
+          <% temp = t.term %>
+      <% end %>
+    </div>
+</div>
+
+<hr width = "90%">
+<br>

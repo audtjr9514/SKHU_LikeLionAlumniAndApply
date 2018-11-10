@@ -1,0 +1,62 @@
+<h1>멤버 설정 페이지</h1>
+<hr/>
+
+<h2>멤버 추가하기</h2>
+<form action="/save_member" method="get">
+    이름 : <input type="text" name="name"><br>
+    학과 :
+    <select name="major">
+        <option value="정보통신공학과"/> 정보통신공학과<br>
+        <option value="소프트웨어공학과"/> 소프트웨어공학과<br>
+        <option value="컴퓨터공학과"/> 컴퓨터공학과<br>
+        <option value="글로컬IT학과"/> 글로컬IT학과<br>
+        <option value="영어학과"/> 영어학과 <br>
+        <option value="중어중국학과"/> 중어중국학과<br>
+        <option value="일어일본학과"/> 일어일본학과<br>
+        <option value="경영학과"/> 경영학과<br>
+        <option value="사회복지학과"/> 사회지학과<br>
+        <option value="사회과학부"/> 사회과학부<br>
+        <option value="디지털컨텐츠학과"/> 디지털컨텐츠학과<br>
+        <option value="신문방송학과"/> 신문방송학과<br>
+        <option value="인문융합자율학부"/> 인문융합자율학부<br>
+        <option value="사회융합자율학부"/> 사회융합자율학부<br>
+        <option value="IT융합자율학부"/> IT융합자율학부<br>
+        <option value="미디어컨텐츠융합자율학부"/> 미디어컨텐츠융합자율학부<br>
+    </select><br>
+    학번 : <input type="number" name="enter_year" value="19"><br>
+    깃수 : <input type="number" name="term" value="7"><br>
+    운영진 활동 깃수 : <input type="number" name="istutor" value="-1"><br>
+    운영진 활동을 하지 않는다면 -1<br>
+    사진 : <input type='file' name='img' accept="image/*" /><br>
+    <input type="submit" value="저장">
+</form>
+<hr/>
+
+<h2>멤버 정보 수정, 삭제하기</h2>
+<div class="container">
+    <div class="row">
+      <% temp = 4 %>
+      <% @members.each do |member| %>
+          <% if temp != member.term %>
+          <hr width = "90%">
+          <% end %>
+          <div class="col-sm-3">
+            <div class="card" style="width: 16rem; margin-top: 1rem; margin-bottom: 1rem;">
+              <img class="card-img-top" src="/assets/<%=member.name%>.jpg" alt="Card image cap">
+              <div class="card-body">
+                <form action="/update_member/<%= member.id %>" method="get">
+                    이름 : <input type="text" name="name" value="<%= member.name %>"><br>
+                    학과 : <input type="text" name="major" value="<%= member.major %>"><br>
+                    학번 : <input type="text" name="enter_year" value="<%= member.enter_year %>"><br>
+                    깃수 : <input type="text" name="term" value="<%= member.term %>"><br>
+                    운영진 활동 깃수 : <input type="text" name="istutor" value="<%= member.istutor %>">
+                    <input type="submit" value="수정확인">
+                </form>
+                <a href="delete_member/<%= member.id %>"><p>삭제</p></a>
+              </div>
+            </div>
+          </div>
+          <% temp = member.term %>
+      <% end %>
+    </div>
+</div>
