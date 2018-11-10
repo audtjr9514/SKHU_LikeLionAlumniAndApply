@@ -1,3 +1,4 @@
 class Port < ActiveRecord::Base
-    has_and_belongs_to_many :members
+    has_many :memberports
+    has_many :members, through: :memberports
 end
