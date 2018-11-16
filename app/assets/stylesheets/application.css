@@ -382,6 +382,7 @@ font-family: 'KoPubDotumMedium';
 }
 .footer-menu-one ul li a:hover{
 	color: #fd8a17;
+	text-decoration: none;
 }
 .footer-menu-two{
 	width: 100%;
@@ -408,6 +409,7 @@ font-family: 'KoPubDotumMedium';
 }
 .footer-menu-two ul li a:hover{
 	color:  #fd8a17;
+	text-decoration: none;
 }
 .footer-bottom{
 	width: 100%;
