@@ -13,13 +13,15 @@
 <body>
   <div class="container2">
  
- 
+ <!--nav-->
  <nav>
          <div id='cssmenu'>
       <li><h4 id="logostay"><img href='/' src="assets/likelion_logo1" height="20em" width="50em">LikeLion at SKHU</h4></li>
       <ul>
-         <li><a data-toggle="modal" data-target="#exampleModal">donation</a></li>
-         <!-- Modal -->
+         <li><a data-toggle="modal" data-target="#exampleModal"  href='#동방'>donation</a></li>
+          <!--#동방은 nav위에 donation에 마우스를 올렷을때 손모양으로 바꾸려고 삽입-->
+          
+         <!-- nav donation Modal -->
          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
            <div class="modal-dialog" role="document">
              <div class="modal-content">
@@ -45,7 +47,7 @@
                 서울특별시 구로구 항동 1-1 성공회대학교 나눔관(5번 건물) 5A114 실
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
               </div>
             </div>
           </div>
@@ -57,7 +59,8 @@
          <li><a href='/'>Home</a></li>
       </ul>
       </div>
-      
+
+      <!--nav 화살표 script-->
       <script>
         (function($) {
 
@@ -154,52 +157,52 @@
   };
 })(jQuery);
 
-(function($){
-$(document).ready(function(){
+  (function($){
+  $(document).ready(function(){
 
-$(window).load(function() {
-  $("#cssmenu").menumaker({
-    title: "Menu",
-    format: "dropdown"
+    $(window).load(function() {
+    $("#cssmenu").menumaker({
+      title: "Menu",
+      format: "dropdown"
   });
 
 
-$('#cssmenu').prepend("<div id='menu-indicator'></div>");
+    $('#cssmenu').prepend("<div id='menu-indicator'></div>");
 
-var foundActive = false, activeElement, indicatorPosition, indicator = $('#cssmenu #menu-indicator'), defaultPosition;
+    var foundActive = false, activeElement, indicatorPosition, indicator = $('#cssmenu #menu-indicator'), defaultPosition;
 
-$("#cssmenu > ul > li").each(function() {
-  if ($(this).hasClass('active')) {
-    activeElement = $(this);
-    foundActive = true;
-  }
-});
+    $("#cssmenu > ul > li").each(function() {
+      if ($(this).hasClass('active')) {
+      activeElement = $(this);
+      foundActive = true;
+      }
+    });
 
-if (foundActive === false) {
-  activeElement = $("#cssmenu > ul > li").first();
-}
+    if (foundActive === false) {
+      activeElement = $("#cssmenu > ul > li").first();
+    }
 
-defaultPosition = indicatorPosition = activeElement.position().left + activeElement.width()/2 - 5;
-console.log(activeElement);
-console.log(activeElement.position().left);
-console.log(activeElement.width());
-indicator.css("left", indicatorPosition);
+    defaultPosition = indicatorPosition = activeElement.position().left + activeElement.width()/2 - 5;
+    console.log(activeElement);
+    console.log(activeElement.position().left);
+    console.log(activeElement.width());
+    indicator.css("left", indicatorPosition);
 
-$("#cssmenu > ul > li").hover(function() {
-  activeElement = $(this);
-  indicatorPosition = activeElement.position().left + activeElement.width()/2 - 5;
-  indicator.css("left", indicatorPosition);
-}, 
-function() {
-  indicator.css("left", defaultPosition);
-});
+    $("#cssmenu > ul > li").hover(function() {
+      activeElement = $(this);
+      indicatorPosition = activeElement.position().left + activeElement.width()/2 - 5;
+      indicator.css("left", indicatorPosition);
+    }, 
+    function() {
+    indicator.css("left", defaultPosition);
+    });
 
-});
+  });
 
-});
+  });
 })(jQuery);
 
-      </script>
+</script>
   <!--<nav class="navbar navbar-expand-lg navbar-light bg-white">-->
   <!--    <img src="assets/likelion_logo1" width="60em" height="22em" alt="likelion_logo">-->
   <!--  <a class="navbar-brand" href="/">LikeLion at SKHU</a>-->
@@ -246,8 +249,8 @@ function() {
 <!--      <p>Jang HeeSeung </p>-->
 <!--  </footer>-->
 
+<!--footer-->
 <div class="footer-main-div">
- 
 <div class="footer-social-icons">
 	<ul>
 		<li><a href="https://www.facebook.com/SkhuLion/" target="_blank"><img src="assets/facebook.png" height="35em" width="35em"></a></li>

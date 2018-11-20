@@ -1,12 +1,12 @@
-// Place all the styles related to the main controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/*bottom*/
 
 .btn {
   padding: .66em 2.25em;
   text-decoration: none;
   position: relative;
   display: inline-block;
+  font-family: 'GoyangDeogyang';
 }
 .btn:after {
   content: '';

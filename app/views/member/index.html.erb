@@ -6,6 +6,7 @@
           <% if temp != member.term %>
           <hr width = "90%">
           <% end %>
+          <!--member card-->
           <div class="col-sm-3">
             <div class="card" style="width: 16rem; margin-top: 1rem; margin-bottom: 1rem;">
               <img class="card-img-top" src="/assets/<%=member.name%>.jpg" alt="Card image cap">
@@ -22,7 +23,7 @@
                 
                 %>
                 
-                <!-- modal -->
+                <!--view detail modal -->
                 <div class="modal fade bd-example-modal-lg" id="Modal<%= member.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                   <div class="modal-dialog modal-lg" role="document">6
                     <div class="modal-content">
