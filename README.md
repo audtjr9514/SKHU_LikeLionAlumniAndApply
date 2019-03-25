@@ -1,6 +1,6 @@
 # LikeLion at SKHU
 
-성공회대 멋쟁이사자처럼 사이트
+* [멋쟁이 사자처럼 성공회대학교 Alumni](http://likelionskhualumni.herokuapp.com/)
 
 ## Built With
 
